@@ -1,7 +1,40 @@
-<toggle (toggle)="onToggle($event)">
+<h2>Basic</h2>
+<div toggle #firstToggle="toggle" (toggle)="onToggle('first', $event)">
+  <p>
+    First:
+    <toggle-on>On</toggle-on>
+    <toggle-off>Off</toggle-off>
+    <toggle-button></toggle-button>
+  </p>
+
+  <toggle #secondToggle="toggle" (toggle)="onToggle('second', $event)">
+    <p>
+      Second:
+      <toggle-on>On</toggle-on>
+      <toggle-off>Off</toggle-off>
+      <toggle-button></toggle-button>
+    </p>
+  </toggle>
+</div>
+
+<h2>Explicit References</h2>
+<p [toggleProvider]="firstToggle">
+  First:
   <toggle-on>On</toggle-on>
   <toggle-off>Off</toggle-off>
-  <toggle-off>Off</toggle-off>
-  <app-other></app-other>
   <toggle-button></toggle-button>
-</toggle>
+</p>
+<p [toggleProvider]="secondToggle">
+  Second:
+  <toggle-on>On</toggle-on>
+  <toggle-off>Off</toggle-off>
+  <toggle-button></toggle-button>
+</p>
+
+<h2>Custom Components</h2>
+<div [toggleProvider]="firstToggle">
+  <app-labelled-state toggleName="First"></app-labelled-state>
+  <app-labelled-button toggleName="First"></app-labelled-button>
+</div>
+<app-labelled-state toggleName="Second" [toggleProvider]="secondToggle"> </app-labelled-state>
+<app-labelled-button toggleName="Second" [toggleProvider]="secondToggle"> </app-labelled-button>

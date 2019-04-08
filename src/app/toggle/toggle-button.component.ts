@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { ToggleComponent } from './toggle.component';
+import { ToggleProviderDirective } from './toggle-provider.directive';
+
 
 @Component({
   selector: 'toggle-button',
-  template: '<switch [on]="toggle.on" (click)="onClick()"></switch>'
+  template: '<switch [on]="toggleProvider.toggle?.on" (click)="onClick()"></switch>'
 })
 export class ToggleButtonComponent {
 
-  constructor(public toggle: ToggleComponent) {}
+  constructor(public toggleProvider: ToggleProviderDirective) {}
 
   onClick() {
-    this.toggle.setOnState(!this.toggle.on);
+    this.toggleProvider.toggle.setOnState(!this.toggleProvider.toggle.on);
   }
 }

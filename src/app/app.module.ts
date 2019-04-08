@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ToggleModule } from './toggle/toggle.module';
-import { OtherComponent } from './other/other.component';
+import { LabelledButtonComponent } from './labelled-button/labelled-button.component';
+import { LabelledStateComponent } from './labelled-state/labelled-state.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OtherComponent
+    LabelledButtonComponent,
+    LabelledStateComponent
   ],
   imports: [
     BrowserModule,

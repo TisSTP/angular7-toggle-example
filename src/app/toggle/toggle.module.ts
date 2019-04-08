@@ -4,22 +4,25 @@ import { SwitchComponent } from '../irrelevant-implementation-details/switch.com
 import { ToggleButtonComponent } from './toggle-button.component';
 import { ToggleOffComponent } from './toggle-off.component';
 import { ToggleOnComponent } from './toggle-on.component';
-import { ToggleComponent } from './toggle.component';
+import { ToggleProviderDirective } from './toggle-provider.directive';
+import { ToggleDirective } from './toggle.directive';
 
 
 @NgModule({
   declarations: [
-    ToggleComponent,
+    ToggleDirective,
+    ToggleProviderDirective,
     ToggleButtonComponent,
     ToggleOnComponent,
     ToggleOffComponent,
-    SwitchComponent
+    SwitchComponent,
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ToggleComponent,
+    ToggleDirective,
+    ToggleProviderDirective,
     ToggleButtonComponent,
     ToggleOnComponent,
     ToggleOffComponent

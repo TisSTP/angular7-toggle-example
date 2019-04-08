@@ -1,3 +1,21 @@
+<div toggle #myToggle="toggle" #myWithToggle="toggleProvider"
+     (toggle)="onToggle(myLabel, $event)"
+     [toggleLabel]="myLabel"
+     [withToggleLabel]="someOtherText">
+
+  <input [(ngModel)]="myLabel" /> <br/>
+  {{myLabel}}:
+  <toggle-on>On</toggle-on>
+  <toggle-off>Off</toggle-off>
+  <toggle-button></toggle-button>
+  <p>toggleLabel: {{myToggle.label}}</p>
+  <p>withToggleLabel: {{myWithToggle.label}}</p>
+
+</div>
+
+
+
+<!--
 <h2>Basic</h2>
 <div toggle #firstToggle="toggle" (toggle)="onToggle('first', $event)">
   <p>
@@ -38,3 +56,4 @@
 </div>
 <app-labelled-state toggleName="Second" [toggleProvider]="secondToggle"> </app-labelled-state>
 <app-labelled-button toggleName="Second" [toggleProvider]="secondToggle"> </app-labelled-button>
+-->

@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { SwitchComponent } from './irrelevant-implementation-details/switch.component';
-import { ToggleComponent } from './toggle/toggle.component';
+import { ToggleModule } from './toggle/toggle.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SwitchComponent,
-    ToggleComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

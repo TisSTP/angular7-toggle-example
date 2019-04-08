@@ -3,8 +3,10 @@
 #ng generate component toggle
 
 # step 2
-ng generate module toggle
+#ng generate module toggle
 #ng generate component toggle/toggle-button -s:true -t:true --skipTests=true
 #ng generate component toggle/toggle-on -s:true -t:true --skipTests=true
 #ng generate component toggle/toggle-off -s:true -t:true --skipTests=true
 
+# step 3a
+#ng generate component other -s:true -t:true --skipTests=true
